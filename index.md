@@ -10,6 +10,21 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 System.out.printf("%1$.6f",positive/len);
 ```
 
+### Make class immutable
+
+```
+To create an immutable class in java, you have to do following steps.
+
+1. Declare the class as final so it can’t be extended.
+2. Make all fields private so that direct access is not allowed.
+3. Don’t provide setter methods for variables
+4. Make all mutable fields final so that it’s value can be assigned only once.
+5. Initialize all the fields via a constructor performing deep copy.
+6. Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.
+```
+
+
+
 ```markdown
 Syntax highlighted code block
 
