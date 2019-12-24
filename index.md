@@ -21,8 +21,25 @@ To create an immutable class in java, you have to do following steps.
 4. Make all mutable fields final so that it’s value can be assigned only once.
 5. Initialize all the fields via a constructor performing deep copy.
 6. Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.
-```
 
+
+```
+### Singleton class
+
+`
+class A{  
+ private static A obj;  
+ private A(){}  
+ public static A getA(){  
+   if (obj == null){  
+      synchronized(Singleton.class){  
+        if (obj == null){  
+            obj = new Singleton();//instance will be created at request time  
+        }  } }  
+  return obj; } 
+
+
+`
 
 
 ```markdown
